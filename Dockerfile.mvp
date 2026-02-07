@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-mvp.txt .
+RUN pip install --no-cache-dir -r requirements-mvp.txt
+COPY cmapss_mvp ./cmapss_mvp
+COPY README.md MODEL_CARD.md ./
+EXPOSE 8000
+CMD ["uvicorn", "cmapss_mvp.api:app", "--host", "0.0.0.0", "--port", "8000"]
