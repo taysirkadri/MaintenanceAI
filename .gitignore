@@ -87,12 +87,7 @@ Thumbs.db
 tmp/
 temp/
 
-# Ignore all .md files
-*.md
-
-# But don't ignore readme.md variants
-!readme.md
-!README.md
-!Readme.md
+# Documentation
+# README and model documentation are tracked explicitly.
 # Keep generated model artifacts local.
 artifacts/
